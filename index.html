@@ -27,30 +27,6 @@
   }
 
 
-  /* LANGUAGE TOGGLE */
-  .lang-toggle {
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    cursor: pointer;
-  }
-
-  .lang-btn {
-    font-size: 0.72rem;
-    font-weight: 500;
-    letter-spacing: 0.1em;
-    color: var(--smoke);
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0.2rem 0.4rem;
-    transition: color 0.3s;
-    font-family: 'Outfit', sans-serif;
-  }
-
-  .lang-btn.active { color: var(--bark); font-weight: 600; }
-  .lang-btn:hover { color: var(--bark); }
-  .lang-sep { color: var(--clay); font-size: 0.7rem; }
 
   /* NAV */
   nav {
@@ -618,11 +594,6 @@
 <!-- NAV -->
 <nav>
   <a href="#" class="nav-logo">ACUADRADA</a>
-  <div class="lang-toggle">
-    <button class="lang-btn active" id="btn-es" onclick="setLang('es')">ES</button>
-    <span class="lang-sep">|</span>
-    <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
-  </div>
   <ul class="nav-links">
     <li><a href="#sobre-mi" data-i18n="nav-about">Sobre mí</a></li>
     <li><a href="#clases" data-i18n="nav-classes">Clases</a></li>
@@ -664,7 +635,7 @@
 
   <div class="about-content reveal">
     <div class="section-label" data-i18n="about-label">Sobre mí</div>
-    <h2 class="section-title" data-i18n="about-title">Cómo el yoga se volvió <span style="color:var(--accent)" data-i18n="about-title-span">mi hogar</span></h2>
+    <h2 class="section-title" data-i18n="about-title">Cómo el yoga se volvió<br><span style="color:var(--accent)" data-i18n="about-title-span">mi hogar</span></h2>
     <div class="divider"></div>
     <p>
       <span data-i18n="about-p1">Soy Agustina Aredes, y hace 6 años me encontré con esta práctica en un momento muy especial de mi vida. No fue solo movimiento, fue un espacio de sostén, de conexión, de volver a mí. Se convirtió en un canal terapéutico enorme, de esos que no sabés que necesitabas hasta que aparecen.</span>
@@ -839,14 +810,40 @@
   reveals.forEach(el => observer.observe(el));
 
   // Form submit
-  function handleSubmit() {
+  async function handleSubmit() {
     const nombre = document.getElementById('nombre').value;
     const email = document.getElementById('email').value;
+    const clase = document.getElementById('clase').value;
+    const nivel = document.getElementById('nivel').value;
+    const mensaje = document.getElementById('mensaje').value;
     if (!nombre || !email) {
       alert('Por favor completá al menos tu nombre y email.');
       return;
     }
-    alert(`¡Gracias, ${nombre}! Te responderé pronto a ${email}. 🌿`);
+    const btn = document.querySelector('[data-i18n="form-submit"]');
+    btn.textContent = '...';
+    btn.disabled = true;
+    try {
+      const res = await fetch('https://formspree.io/f/xzdykkyz', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ nombre, email, clase, nivel, mensaje })
+      });
+      if (res.ok) {
+        alert('¡Gracias, ' + nombre + '! Te responderé pronto. 🌿');
+        document.getElementById('nombre').value = '';
+        document.getElementById('email').value = '';
+        document.getElementById('clase').value = '';
+        document.getElementById('nivel').value = '';
+        document.getElementById('mensaje').value = '';
+      } else {
+        alert('Hubo un error. Por favor escribime directamente a agustina_a92@hotmail.com');
+      }
+    } catch(e) {
+      alert('Hubo un error. Por favor escribime directamente a agustina_a92@hotmail.com');
+    }
+    btn.textContent = btn.getAttribute('data-i18n') ? (document.documentElement.lang === 'en' ? 'Send message' : 'Enviar mensaje') : 'Enviar mensaje';
+    btn.disabled = false;
   }
 </script>
 
@@ -1065,9 +1062,7 @@ function setLang(lang) {
   var mensaje = document.getElementById('mensaje'); if(mensaje) mensaje.placeholder = t['form-msg-ph'];
   setText('[data-i18n="form-submit"]', 'form-submit');
 
-  // Buttons
-  document.getElementById('btn-es').classList.toggle('active', lang === 'es');
-  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+
 }
 
 // Auto-detect language
