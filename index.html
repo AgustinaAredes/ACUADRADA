@@ -15,6 +15,8 @@
     --smoke: #8a8279;
     --white: #fdfaf5;
     --accent: #e8621a;
+    --lila: #f4f0fa;
+    --lila-dark: #a8a0c0;
   }
 
   html { scroll-behavior: smooth; }
@@ -143,8 +145,8 @@
   .hero-cta {
     display: inline-block;
     padding: 0.9rem 2.4rem;
-    background: var(--bark);
-    color: var(--white);
+    background: var(--lila-dark);
+    color: var(--bark);
     text-decoration: none;
     font-size: 0.78rem;
     letter-spacing: 0.15em;
@@ -243,7 +245,7 @@
     grid-template-columns: 1fr 1fr;
     gap: 6rem;
     align-items: center;
-    background: var(--sand);
+    background: var(--lila);
   }
 
   .about-image {
@@ -402,23 +404,24 @@
   }
 
   .class-card.featured {
-    background: var(--bark);
+    background: var(--lila-dark);
   }
 
-  .class-card.featured .class-tag { color: var(--clay); }
-  .class-card.featured .class-name { color: var(--white); }
-  .class-card.featured .class-desc { color: rgba(253,250,245,0.6); }
-  .class-card.featured .price-amount { color: var(--white); }
-  .class-card.featured .price-detail { color: rgba(253,250,245,0.5); }
+  .class-card.featured .class-tag { color: var(--bark); opacity: 0.7; }
+  .class-card.featured .class-name { color: var(--bark); }
+  .class-card.featured .class-desc { color: #5a5260; }
+  .class-card.featured .price-amount { color: var(--bark); }
+  .class-card.featured .price-detail { color: var(--smoke); }
   .class-card.featured .class-cta {
-    border-color: var(--clay);
-    color: var(--clay);
+    border-color: var(--bark);
+    color: var(--bark) !important;
+    background: rgba(255,255,255,0.3);
   }
   .class-card.featured .class-cta:hover {
-    background: var(--clay);
-    color: var(--bark);
+    background: var(--bark);
+    color: var(--white) !important;
   }
-  .class-card.featured:hover { background: #4a3c30; }
+  .class-card.featured:hover { background: #9890b0; }
 
   .featured-badge {
     position: absolute;
@@ -426,8 +429,8 @@
     font-size: 0.62rem;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: var(--clay);
-    border: 1px solid var(--clay);
+    color: var(--bark);
+    border: 1px solid var(--bark);
     padding: 0.3rem 0.7rem;
   }
 
@@ -612,7 +615,7 @@
     <p class="hero-desc" data-i18n="hero-desc">Clases de Power Yoga y Restaurativo para todos los niveles. Una práctica nacida desde adentro, con el propósito de acompañarte en tu propio camino.</p>
     <a href="#clases" class="hero-cta" data-i18n="hero-cta">Ver clases</a>
     <br>
-    <a href="#contacto" style="display:inline-block;margin-top:0.8rem;padding:0.75rem 2rem;background:#d4bc9e;color:var(--bark);font-size:0.78rem;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;font-weight:700;transition:background 0.3s;" data-i18n="hero-free">Probá tu clase gratis</a>
+    <a href="#contacto" style="display:inline-block;margin-top:0.8rem;padding:0.75rem 2rem;background:var(--lila);color:var(--bark);font-size:0.78rem;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;font-weight:700;transition:background 0.3s;" data-i18n="hero-free">Probá tu clase gratis</a>
   </div>
 
   <div class="hero-visual">
@@ -696,6 +699,7 @@
         <span data-i18n="stripe-btn">Pagar con Stripe</span>
       </a>
       <a href="#contacto" style="display:block;margin-top:0.7rem;padding:0.55rem 1rem;background:#d4bc9e;color:var(--bark);font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;font-weight:700;text-align:center;" data-i18n="free-btn">¿No sabés por dónde empezar? Probá gratis</a>
+      <a href="https://calendly.com/agustina_a92/30min" target="_blank" style="display:block;margin-top:0.5rem;padding:0.7rem 1rem;background:#e8e0f5;color:var(--bark);font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;font-weight:700;text-align:center;border:1px solid #c4b3e0;">📅 Reservar horario</a>
     </div>
 
     <div class="class-card featured">
@@ -712,6 +716,7 @@
         <span data-i18n="stripe-btn">Pagar con Stripe</span>
       </a>
       <a href="#contacto" style="display:block;margin-top:0.7rem;padding:0.55rem 1rem;background:#d4bc9e;color:var(--bark);font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;font-weight:700;text-align:center;" data-i18n="free-btn">¿No sabés por dónde empezar? Probá gratis</a>
+      <a href="https://calendly.com/agustina_a92/30min" target="_blank" style="display:block;margin-top:0.5rem;padding:0.7rem 1rem;background:#e8e0f5;color:var(--bark);font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;font-weight:700;text-align:center;border:1px solid #c4b3e0;">📅 Reservar horario</a>
     </div>
 
     <div class="class-card">
@@ -727,6 +732,7 @@
         <span data-i18n="stripe-btn">Pagar con Stripe</span>
       </a>
       <a href="#contacto" style="display:block;margin-top:0.7rem;padding:0.55rem 1rem;background:#d4bc9e;color:var(--bark);font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;font-weight:700;text-align:center;" data-i18n="free-btn">¿No sabés por dónde empezar? Probá gratis</a>
+      <a href="https://calendly.com/agustina_a92/30min" target="_blank" style="display:block;margin-top:0.5rem;padding:0.7rem 1rem;background:#e8e0f5;color:var(--bark);font-size:0.68rem;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;font-weight:700;text-align:center;border:1px solid #c4b3e0;">📅 Reservar horario</a>
     </div>
   </div>
   </div>
@@ -790,13 +796,104 @@
   </div>
 </section>
 
+<!-- FAQ -->
+<section class="faq" id="faq" style="background:var(--white);padding:7rem 4rem;">
+  <div class="reveal" style="max-width:800px;margin:0 auto;">
+    <div class="section-label">Preguntas frecuentes</div>
+    <h2 class="section-title">Lo que más <span style="color:var(--accent)">nos preguntan</span></h2>
+    <div style="margin-top:2.5rem;">
+
+      <div class="faq-item" style="border-bottom:1px solid rgba(196,168,130,0.25);padding:1.5rem 0;">
+        <div class="faq-q" onclick="toggleFaq(this)" style="display:flex;justify-content:space-between;align-items:center;cursor:pointer;">
+          <span style="font-family:'Bodoni Moda',serif;font-size:1.1rem;color:var(--bark);">¿Necesito experiencia previa para tomar clases?</span>
+          <span style="font-size:1.4rem;color:var(--clay);transition:transform 0.3s;">+</span>
+        </div>
+        <div class="faq-a" style="display:none;padding-top:1rem;font-size:0.9rem;font-weight:300;color:var(--smoke);line-height:1.8;">No, para nada. Las clases están diseñadas para todos los niveles. Si es tu primera vez, te lo digo en el formulario y adapto la práctica a vos.</div>
+      </div>
+
+      <div class="faq-item" style="border-bottom:1px solid rgba(196,168,130,0.25);padding:1.5rem 0;">
+        <div class="faq-q" onclick="toggleFaq(this)" style="display:flex;justify-content:space-between;align-items:center;cursor:pointer;">
+          <span style="font-family:'Bodoni Moda',serif;font-size:1.1rem;color:var(--bark);">¿Qué necesito para tomar una clase online?</span>
+          <span style="font-size:1.4rem;color:var(--clay);transition:transform 0.3s;">+</span>
+        </div>
+        <div class="faq-a" style="display:none;padding-top:1rem;font-size:0.9rem;font-weight:300;color:var(--smoke);line-height:1.8;">Solo necesitás un dispositivo con cámara (celular, tablet o computadora), conexión a internet, y si tenés mat mejor — si no, una superficie cómoda alcanza. Las clases son por Zoom.</div>
+      </div>
+
+      <div class="faq-item" style="border-bottom:1px solid rgba(196,168,130,0.25);padding:1.5rem 0;">
+        <div class="faq-q" onclick="toggleFaq(this)" style="display:flex;justify-content:space-between;align-items:center;cursor:pointer;">
+          <span style="font-family:'Bodoni Moda',serif;font-size:1.1rem;color:var(--bark);">¿Cómo funciona la clase de prueba gratuita?</span>
+          <span style="font-size:1.4rem;color:var(--clay);transition:transform 0.3s;">+</span>
+        </div>
+        <div class="faq-a" style="display:none;padding-top:1rem;font-size:0.9rem;font-weight:300;color:var(--smoke);line-height:1.8;">Completás el formulario de contacto o me escribís directamente, coordinamos un horario y listo. Sin compromiso — es para que conozcas mi estilo y veas si conectamos.</div>
+      </div>
+
+      <div class="faq-item" style="border-bottom:1px solid rgba(196,168,130,0.25);padding:1.5rem 0;">
+        <div class="faq-q" onclick="toggleFaq(this)" style="display:flex;justify-content:space-between;align-items:center;cursor:pointer;">
+          <span style="font-family:'Bodoni Moda',serif;font-size:1.1rem;color:var(--bark);">¿Puedo cancelar o reprogramar una clase?</span>
+          <span style="font-size:1.4rem;color:var(--clay);transition:transform 0.3s;">+</span>
+        </div>
+        <div class="faq-a" style="display:none;padding-top:1rem;font-size:0.9rem;font-weight:300;color:var(--smoke);line-height:1.8;">Sí, con al menos 12 horas de anticipación. Entiendo que la vida pasa — solo avisame con tiempo y buscamos otro horario.</div>
+      </div>
+
+      <div class="faq-item" style="border-bottom:1px solid rgba(196,168,130,0.25);padding:1.5rem 0;">
+        <div class="faq-q" onclick="toggleFaq(this)" style="display:flex;justify-content:space-between;align-items:center;cursor:pointer;">
+          <span style="font-family:'Bodoni Moda',serif;font-size:1.1rem;color:var(--bark);">¿En qué zona horaria son los horarios?</span>
+          <span style="font-size:1.4rem;color:var(--clay);transition:transform 0.3s;">+</span>
+        </div>
+        <div class="faq-a" style="display:none;padding-top:1rem;font-size:0.9rem;font-weight:300;color:var(--smoke);line-height:1.8;">Los horarios publicados son en hora de Sydney (AEST/AEDT). Si estás en otro país, escribime y calculamos juntos el horario que más te conviene.</div>
+      </div>
+
+      <div class="faq-item" style="padding:1.5rem 0;">
+        <div class="faq-q" onclick="toggleFaq(this)" style="display:flex;justify-content:space-between;align-items:center;cursor:pointer;">
+          <span style="font-family:'Bodoni Moda',serif;font-size:1.1rem;color:var(--bark);">¿Cómo pago?</span>
+          <span style="font-size:1.4rem;color:var(--clay);transition:transform 0.3s;">+</span>
+        </div>
+        <div class="faq-a" style="display:none;padding-top:1rem;font-size:0.9rem;font-weight:300;color:var(--smoke);line-height:1.8;">El pago es online a través de Stripe, de forma segura con tarjeta de crédito o débito. Para clases individuales también podés consultarme por otros medios de pago.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- POLÍTICAS DE PRIVACIDAD -->
+<section id="privacidad" style="background:var(--sand);padding:5rem 4rem;">
+  <div class="reveal" style="max-width:800px;margin:0 auto;">
+    <div class="section-label">Legal</div>
+    <h2 class="section-title">Política de <span style="color:var(--accent)">privacidad</span></h2>
+    <div style="margin-top:2rem;font-size:0.88rem;font-weight:300;color:var(--smoke);line-height:1.9;">
+      <p style="margin-bottom:1.2rem;"><strong style="color:var(--bark);font-weight:400;">Datos que recopilamos.</strong> A través del formulario de contacto recopilamos tu nombre, email, nivel de experiencia y el mensaje que nos enviás. No recopilamos ningún otro dato personal.</p>
+      <p style="margin-bottom:1.2rem;"><strong style="color:var(--bark);font-weight:400;">Cómo usamos tu información.</strong> Tus datos se usan únicamente para responderte y coordinar tus clases. No los usamos para publicidad ni los compartimos con terceros bajo ningún concepto.</p>
+      <p style="margin-bottom:1.2rem;"><strong style="color:var(--bark);font-weight:400;">Almacenamiento.</strong> Los mensajes del formulario son procesados por Formspree y enviados directamente a nuestro email. No almacenamos tus datos en ningún servidor propio.</p>
+      <p style="margin-bottom:1.2rem;"><strong style="color:var(--bark);font-weight:400;">Pagos.</strong> Los pagos son procesados por Stripe, que cuenta con certificación PCI DSS. No tenemos acceso ni almacenamos tus datos de tarjeta de crédito.</p>
+      <p><strong style="color:var(--bark);font-weight:400;">Contacto.</strong> Si tenés preguntas sobre el uso de tus datos, escribinos a <a href="mailto:agustina_a92@hotmail.com" style="color:var(--accent);text-decoration:none;">agustina_a92@hotmail.com</a></p>
+    </div>
+  </div>
+</section>
+
 <!-- FOOTER -->
 <footer>
   <div class="footer-logo">ACUADRADA</div>
-  <div class="footer-copy">© 2026 · Agustina Aredes · Yoga online</div>
+  <div style="display:flex;gap:2rem;align-items:center;">
+    <a href="#privacidad" style="font-size:0.7rem;color:rgba(253,250,245,0.4);text-decoration:none;letter-spacing:0.08em;">Privacidad</a>
+    <a href="#faq" style="font-size:0.7rem;color:rgba(253,250,245,0.4);text-decoration:none;letter-spacing:0.08em;">FAQ</a>
+    <div class="footer-copy">© 2026 · Agustina Aredes · Yoga online</div>
+  </div>
 </footer>
 
 <script>
+  // FAQ accordion
+  function toggleFaq(el) {
+    const answer = el.nextElementSibling;
+    const icon = el.querySelector('span:last-child');
+    const isOpen = answer.style.display === 'block';
+    document.querySelectorAll('.faq-a').forEach(a => a.style.display = 'none');
+    document.querySelectorAll('.faq-q span:last-child').forEach(i => { i.textContent = '+'; i.style.transform = 'rotate(0deg)'; });
+    if (!isOpen) {
+      answer.style.display = 'block';
+      icon.textContent = '×';
+    }
+  }
+
   // Scroll reveal
   const reveals = document.querySelectorAll('.reveal');
   const observer = new IntersectionObserver((entries) => {
@@ -824,10 +921,16 @@
     btn.textContent = '...';
     btn.disabled = true;
     try {
+      const formData = new FormData();
+      formData.append('nombre', nombre);
+      formData.append('email', email);
+      formData.append('clase', clase);
+      formData.append('nivel', nivel);
+      formData.append('mensaje', mensaje);
       const res = await fetch('https://formspree.io/f/xzdykkyz', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ nombre, email, clase, nivel, mensaje })
+        body: formData,
+        headers: { 'Accept': 'application/json' }
       });
       if (res.ok) {
         alert('¡Gracias, ' + nombre + '! Te responderé pronto. 🌿');
@@ -842,7 +945,7 @@
     } catch(e) {
       alert('Hubo un error. Por favor escribime directamente a agustina_a92@hotmail.com');
     }
-    btn.textContent = btn.getAttribute('data-i18n') ? (document.documentElement.lang === 'en' ? 'Send message' : 'Enviar mensaje') : 'Enviar mensaje';
+    btn.textContent = 'Enviar mensaje';
     btn.disabled = false;
   }
 </script>
